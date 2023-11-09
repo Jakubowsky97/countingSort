@@ -16,6 +16,10 @@ public class Main {
             System.out.println("Wprowadź kolejno " + wybor_size + " liczb." );
             for(int i = 0; i < wybor_size; i++) {
                 numberArray[i] = scanner.nextInt();
+                if(numberArray[i] < max) {
+                    System.out.println("Liczba wpisana w tablice nie moze byc wieksza od maksymalnej którą podałeś.");
+                    System.exit(0);
+                }
             }
             System.out.println("Nieposortowana tablica");
             for(int i = 0; i < wybor_size; i++) {
@@ -48,5 +52,7 @@ public class Main {
         }
         return numberArray;
     }
+
+
 }
 
